@@ -1,0 +1,92 @@
+<section>
+  <h2>Instalación de Angular y creación del proyecto</h2>
+
+  <p>
+    Para poder trabajar con Angular necesitamos instalar algunas herramientas previas en nuestro
+    ordenador. A continuación se describen los pasos básicos.
+  </p>
+
+  <h3>1. Instalar Node.js</h3>
+  <p>
+    Angular utiliza <strong>Node.js</strong> y <strong>npm</strong> (el gestor de paquetes de Node)
+    para instalar dependencias y ejecutar comandos. El primer paso es descargar e instalar Node.js
+    desde su página oficial. Al instalar Node también se instala npm.
+  </p>
+
+  <h3>2. Instalar Angular CLI</h3>
+  <p>
+    La <strong>Angular CLI</strong> (Command Line Interface) es una herramienta de línea de comandos
+    que facilita la creación y gestión de proyectos Angular.
+  </p>
+  <p>
+    Una vez instalado Node, abrimos una terminal y ejecutamos:
+  </p>
+  <pre><code>npm install -g @angular/cli</code></pre>
+  <p>
+    El parámetro <code>-g</code> indica que la instalación será global, es decir, que podremos usar
+    el comando <code>ng</code> desde cualquier carpeta.
+  </p>
+
+  <h3>3. Crear un nuevo proyecto</h3>
+  <p>
+    En la carpeta donde queramos guardar el proyecto, ejecutamos:
+  </p>
+  <pre><code>ng new tutorial-angular</code></pre>
+  <p>
+    Durante el proceso, la CLI puede hacer varias preguntas (por ejemplo si queremos añadir
+    enrutador o algún tipo de estilo). Para esta actividad podemos aceptar las opciones por defecto
+    o elegir:
+  </p>
+  <ul>
+    <li>Incluir enrutador: <strong>Sí</strong>, para poder tener varias páginas/secciones.</li>
+    <li>Estilos: por ejemplo, CSS.</li>
+  </ul>
+
+  <p>
+    Cuando el comando termina, se crea una carpeta llamada <code>tutorial-angular</code> con todo
+    el esqueleto del proyecto.
+  </p>
+
+  <h3>4. Ejecutar la aplicación</h3>
+  <p>
+    Entramos en la carpeta del proyecto y ejecutamos el servidor de desarrollo:
+  </p>
+  <pre><code>cd tutorial-angular
+ng serve</code></pre>
+  <p>
+    Tras unos segundos, la aplicación estará disponible en el navegador en una dirección similar a:
+    <code>http://localhost:4200</code>.
+  </p>
+
+  <p>
+    Cada vez que guardemos cambios en el código, la página se recargará automáticamente
+    y veremos el resultado actualizado.
+  </p>
+  <h3>5. Visualizar los resultados en el navegador</h3>
+<p>
+  Una vez creado el proyecto y dentro de la carpeta del mismo, se ejecuta el siguiente comando:
+</p>
+
+<pre><code>ng serve --open</code></pre>
+
+<p>
+  Este comando inicia un servidor de desarrollo y abre automáticamente el navegador en
+  <strong>http://localhost:4200</strong>. Cada vez que se realizan cambios en los archivos
+  del proyecto, Angular los detecta y recarga la página de forma automática.
+</p>
+
+<h3>6. Crear componentes adicionales</h3>
+<p>
+  Para ampliar la aplicación y organizar el contenido en secciones, se pueden crear nuevos
+  componentes con el siguiente comando de Angular CLI:
+</p>
+
+<pre><code>ng generate component nombre-del-componente</code></pre>
+
+<p>
+  En este tutorial se han creado varios componentes (Inicio, Justificación, Instalación, etc.)
+  y se han enlazado mediante el sistema de rutas de Angular.
+</p>
+</section>
+
+

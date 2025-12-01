@@ -1,0 +1,92 @@
+<section>
+  <h2>Funcionamiento básico de Angular</h2>
+
+  <h3>¿Sobre qué actúa Angular?</h3>
+  <p>
+    Angular actúa principalmente sobre <strong>componentes</strong> y <strong>plantillas HTML</strong>.
+    Cada componente representa una parte de la interfaz de usuario, y la aplicación se construye
+    combinando muchos componentes pequeños.
+  </p>
+  <p>
+    En aplicaciones de una sola página (SPA), como la de este tutorial, Angular no recarga la página
+    completa, sino que va actualizando las vistas dentro de la misma página según la ruta seleccionada.
+  </p>
+
+  <h3>Componentes, plantillas y rutas</h3>
+  <p>
+    En este tutorial se ha usado la siguiente estructura:
+  </p>
+  <ul>
+    <li>
+      Un componente raíz <strong>AppComponent</strong>, definido en <code>app.ts</code>,
+      cuya plantilla principal es <code>app.html</code>. En esta plantilla se define la cabecera,
+      el menú de navegación y un <code>&lt;router-outlet&gt;</code> donde se carga el contenido.
+    </li>
+    <li>
+      Varios componentes independientes (Inicio, Justificación, Instalación, etc.), cada uno con su
+      propio archivo TypeScript y su propia plantilla HTML.
+    </li>
+    <li>
+      Un archivo de rutas <code>app.routes.ts</code> que indica qué componente se debe mostrar
+      para cada ruta, por ejemplo <code>/justificacion</code> o <code>/ejemplo</code>.
+    </li>
+  </ul>
+
+  <p>
+    Cuando el usuario hace clic en un enlace del menú con <code>routerLink</code>, Angular actualiza
+    la ruta y carga el componente correspondiente dentro del <code>router-outlet</code>.
+  </p>
+
+  <h3>¿Cómo se editan y modifican los ficheros?</h3>
+  <p>
+    Los ficheros más importantes que se modifican al trabajar con Angular son:
+  </p>
+  <ul>
+    <li>
+      Los archivos <strong>.ts</strong> de cada componente, donde se define la lógica y los datos
+      que se quieren mostrar.
+    </li>
+    <li>
+      Los archivos <strong>.html</strong> de las plantillas, donde se coloca la estructura visual
+      y se usan las expresiones de Angular para mostrar datos (por ejemplo, usando interpolación con dobles llaves), directivas, etc.
+
+    </li>
+    <li>
+      Opcionalmente, los archivos <strong>.css</strong> de cada componente o el
+      <code>styles.css</code> global para definir la apariencia.
+    </li>
+  </ul>
+
+  <p>
+    Cualquier cambio en estos archivos se refleja automáticamente en el navegador mientras el
+    servidor de desarrollo está ejecutándose con <code>ng serve</code>.
+  </p>
+
+  <h3>¿Cómo se integran con otras aplicaciones?</h3>
+  <p>
+    En este tutorial no se ha utilizado ninguna API externa ni base de datos, pero Angular permite
+    comunicarse con otras aplicaciones a través de peticiones HTTP (por ejemplo, a una API REST).
+    Para ello se suelen crear <strong>servicios</strong> en TypeScript que se encargan de llamar
+    a la API y proporcionar los datos a los componentes.
+  </p>
+
+  <p>
+    Aunque este proyecto es sencillo, la estructura básica que se ha utilizado (componentes,
+    rutas, plantillas y estilos) es la misma que se utiliza en aplicaciones de Angular más
+    complejas que sí consumen datos externos.
+  </p>
+</section>
+<h3>¿Cómo se referencia Angular desde otras aplicaciones?</h3>
+<p>
+  Aunque este proyecto no utiliza servicios externos, Angular permite integrarse con otras
+  aplicaciones mediante peticiones HTTP. Esto suele hacerse creando <strong>servicios</strong>
+  que actúan como punto intermedio entre la aplicación y la API.
+</p>
+
+<p>
+  Un servicio puede realizar peticiones a una API REST (por ejemplo, obtener datos de usuarios),
+  procesar la respuesta y entregarla a los componentes para su visualización. De esta forma,
+  Angular puede formar parte de una arquitectura mayor compuesta de múltiples aplicaciones
+  conectadas entre sí.
+</p>
+

@@ -1,0 +1,57 @@
+<section>
+  <h2>Aplicación de ejemplo en Angular</h2>
+
+  <p>
+    Esta pequeña aplicación muestra una lista de conceptos básicos de Angular.
+    Al hacer clic en cada concepto se despliega o se oculta su descripción.
+  </p>
+
+  <ul>
+    <li *ngFor="let concepto of conceptos">
+      <button (click)="toggleDescripcion(concepto)">
+        {{ concepto.nombre }}
+      </button>
+
+      <p *ngIf="concepto.visible">
+        {{ concepto.descripcion }}
+      </p>
+    </li>
+  </ul>
+
+  <p>Con este ejemplo vemos:</p>
+  <ul>
+    <li>Cómo recorrer listas con <code>*ngFor</code>.</li>
+    <li>Cómo manejar eventos de clic con <code>(click)</code>.</li>
+    <li>Cómo mostrar u ocultar contenido con <code>*ngIf</code>.</li>
+  </ul>
+  
+  <h3>¿Cómo hemos construido esta aplicación de ejemplo?</h3>
+  <p>
+    Para crear esta pequeña aplicación se han seguido estos pasos:
+  </p>
+  <ol>
+    <li>
+      Crear un nuevo componente con Angular CLI:
+      <code>ng g c ejemplo</code>.
+    </li>
+    <li>
+      Definir en <strong>ejemplo.ts</strong> una lista de conceptos como un array de objetos
+      de TypeScript, cada uno con nombre, descripción y un valor booleano para controlar si
+      se muestra o no.
+    </li>
+    <li>
+      En la plantilla <strong>ejemplo.html</strong>, recorrer la lista con la directiva
+      <code>*ngFor</code> y usar <code>(click)</code> para manejar el evento de pulsar el botón.
+    </li>
+    <li>
+      Utilizar la directiva <code>*ngIf</code> para mostrar u ocultar la descripción de cada
+      concepto según el estado de la propiedad <code>visible</code>.
+    </li>
+  </ol>
+
+  <p>
+    De esta forma se ve claramente cómo se conectan los datos definidos en TypeScript con la
+    interfaz HTML a través del <em>data binding</em> de Angular.
+  </p>
+</section>
+
